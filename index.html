@@ -785,12 +785,30 @@
     .projects{ position:relative; border-top:1px solid var(--line-soft); }
     .proj-list{ margin-top:52px; border-top:1px solid var(--line-soft); }
     .proj{
-      position:relative; display:grid; grid-template-columns:56px 1fr; gap:28px;
+      position:relative; display:grid; grid-template-columns:40px 260px 1fr; gap:28px; align-items:center;
       padding:36px 0; border-bottom:1px solid var(--line-soft);
       transition:background .2s;
     }
     .proj:hover{ background:rgba(255,255,255,.025); }
-    .proj-index{ font-family:var(--mono); color:var(--muted); font-size:.92rem; padding-top:6px; }
+    .proj-index{ font-family:var(--mono); color:var(--muted); font-size:.92rem; align-self:start; padding-top:6px; }
+    .proj-media{
+      position:relative; border-radius:10px; overflow:hidden; aspect-ratio:16/10;
+      background:var(--panel); border:1px solid var(--line-soft); flex:none;
+    }
+    .proj-media img{
+      width:100%; height:100%; object-fit:cover; display:block;
+      filter:saturate(.88) brightness(.92);
+      transition:transform .7s cubic-bezier(.16,1,.3,1), filter .4s;
+    }
+    .proj:hover .proj-media img{ transform:scale(1.06); filter:saturate(1) brightness(1); }
+    .proj-badge{
+      position:absolute; top:10px; left:10px; z-index:2;
+      font-family:var(--mono); font-size:.6rem; font-weight:400; letter-spacing:.08em; text-transform:uppercase;
+      padding:5px 11px; border-radius:99px; backdrop-filter:blur(6px);
+    }
+    .proj-badge-client{ background:var(--accent); color:#fff; border:1px solid var(--accent); }
+    .proj-badge-ref{ background:rgba(0,0,0,.6); color:var(--accent-2); border:1px solid rgba(110,140,255,.4); }
+    .proj-badge-concept{ background:rgba(0,0,0,.6); color:var(--muted); border:1px solid var(--line); }
     .proj-top{ display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; }
     .proj h3{ font-size:clamp(1.3rem, 2.2vw, 1.65rem); font-family:'Questrial'; color:#fff; display:inline-flex; align-items:center; gap:10px; }
     .proj .arrow{ color:var(--accent-2); transition:transform .25s ease; flex:none; }
@@ -799,7 +817,18 @@
     .proj p{ color:var(--slate); font-size:1rem; margin-top:12px; max-width:620px; }
     .proj-tags{ display:flex; gap:10px; flex-wrap:wrap; margin-top:18px; }
     .proj-tags span{ font-family:var(--mono); font-size:.74rem; color:var(--muted); border:1px solid var(--line); border-radius:99px; padding:4px 12px; }
-    @media (max-width:640px){ .proj{ grid-template-columns:30px 1fr; gap:16px; padding:26px 0; } }
+    .proj-cta{
+      display:inline-flex; align-items:center; gap:7px; margin-top:16px;
+      font-family:var(--mono); font-size:.72rem; letter-spacing:.04em; text-transform:uppercase; color:var(--accent-2);
+    }
+    .proj-cta svg{ width:12px; height:12px; transition:transform .2s ease; flex:none; }
+    .proj:hover .proj-cta svg{ transform:translate(3px,-3px); }
+    @media (max-width:900px){ .proj{ grid-template-columns:32px 180px 1fr; gap:20px; } }
+    @media (max-width:640px){
+      .proj{ display:flex; flex-direction:column; align-items:stretch; gap:16px; padding:26px 0; }
+      .proj-index{ order:-1; }
+      .proj-media{ aspect-ratio:16/10; width:100%; }
+    }
 
     /* ── Kontakt ── */
     #kontakt{ position:relative; border-top:1px solid var(--line-soft); }
@@ -1576,40 +1605,55 @@
       <div class="fu">
         <div class="eyebrow"><span class="idx">06</span><span>Einblicke</span></div>
         <h2 class="sec-h2">So sehen unsere Websites aus</h2>
-        <p class="sec-sub">Eine Auswahl aus unserer Arbeit – vom Handwerksbetrieb bis zur Gastronomie.</p>
+        <p class="sec-sub">Ein reales Kundenprojekt, eine Referenzarbeit und ein Design-Showcase – aus der Gastronomie.</p>
       </div>
       <div class="proj-list">
-        <a class="proj fu" href="projekte/maler-kessler.html" target="_blank" rel="noopener">
+        <a class="proj fu" href="https://takumi-dortmund.com/" target="_blank" rel="noopener noreferrer">
           <div class="proj-index">01</div>
+          <div class="proj-media">
+            <img src="assets/proj-takumi.jpg" alt="Startseite der Website von Takumi Dortmund, einem japanischen Ramen-Restaurant" loading="lazy">
+            <span class="proj-badge proj-badge-client">Kundenprojekt</span>
+          </div>
           <div>
             <div class="proj-top">
-              <h3>Malerbetrieb-Website <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></h3>
-              <span class="proj-kind">Handwerk</span>
+              <h3>Takumi Dortmund <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></h3>
+              <span class="proj-kind">Gastronomie · Ramen</span>
             </div>
-            <p>Auftritt für einen Malerbetrieb mit Leistungsübersicht, Referenzen und direkter Kontaktaufnahme für Anstrich- und Fassadenarbeiten.</p>
-            <div class="proj-tags"><span>Leistungen</span><span>Festpreis-Angebot</span><span>Lokal-SEO</span></div>
+            <p>Individuelles Webdesign &amp; Entwicklung für ein japanisches Ramen-Restaurant in Dortmund – unser erstes realisiertes Kundenprojekt.</p>
+            <div class="proj-tags"><span>Speisekarte</span><span>Fensterplätze</span><span>Anfahrt</span></div>
+            <span class="proj-cta">Website ansehen · takumi-dortmund.com <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
           </div>
         </a>
-        <a class="proj fu" href="projekte/harry-style.html" target="_blank" rel="noopener">
+        <a class="proj fu" href="https://drostenkeller.vercel.app/" target="_blank" rel="noopener noreferrer">
           <div class="proj-index">02</div>
+          <div class="proj-media">
+            <img src="assets/proj-drostenkeller.jpg" alt="Startseite der Website des Restaurants Drostenkeller" loading="lazy">
+            <span class="proj-badge proj-badge-ref">Referenzprojekt</span>
+          </div>
           <div>
             <div class="proj-top">
-              <h3>Harry Style – Friseursalon <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></h3>
-              <span class="proj-kind">Beauty &amp; Lifestyle</span>
+              <h3>Drostenkeller <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></h3>
+              <span class="proj-kind">Restaurant · Gastronomie</span>
             </div>
-            <p>Moderner Auftritt für einen Friseursalon in Berlin – Leistungsübersicht, Haartyp-Beratung und Bewertungen für direkte Terminbuchung.</p>
-            <div class="proj-tags"><span>Leistungen</span><span>Terminbuchung</span><span>Bewertungen</span></div>
+            <p>Modernes, hochwertiges Webdesign für einen traditionsreichen Gastronomiebetrieb.</p>
+            <div class="proj-tags"><span>Speisekarte</span><span>Tischreservierung</span><span>Galerie</span></div>
+            <span class="proj-cta">Website ansehen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
           </div>
         </a>
-        <a class="proj fu" href="projekte/latavola.html" target="_blank" rel="noopener">
+        <a class="proj fu" href="https://marezzo.vercel.app/" target="_blank" rel="noopener noreferrer">
           <div class="proj-index">03</div>
+          <div class="proj-media">
+            <img src="assets/proj-marezzo.jpg" alt="Startseite von Marezzo, einem Design-Concept für ein Steakhouse in Mayfair, London" loading="lazy">
+            <span class="proj-badge proj-badge-concept">Design Concept</span>
+          </div>
           <div>
             <div class="proj-top">
-              <h3>La Tavola – Ristorante <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></h3>
-              <span class="proj-kind">Gastronomie</span>
+              <h3>Marezzo <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></h3>
+              <span class="proj-kind">Premium Gastronomie · Steakhouse</span>
             </div>
-            <p>Stimmungsvoller Auftritt für ein italienisches Restaurant – vollständige Speisekarte, Ambiente-Galerie und Tischreservierung.</p>
-            <div class="proj-tags"><span>Speisekarte</span><span>Reservierung</span><span>Ambiente</span></div>
+            <p>Marezzo — Steakhouse am offenen Feuer, Mayfair, London. Eigenständige Konzeptarbeit ohne realen Auftraggeber – zeigt unsere Handschrift im Luxury-Webdesign.</p>
+            <div class="proj-tags"><span>Signature Cuts</span><span>Private Dining</span><span>Premium Design</span></div>
+            <span class="proj-cta">Website ansehen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
           </div>
         </a>
       </div>
