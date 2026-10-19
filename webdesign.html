@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webdesign & Entwicklung – individuelle Websites aus Hemer | Noventry</title>
+  <meta name="description" content="Individuell entworfene und entwickelte Unternehmenswebsites für lokale Betriebe im Sauerland. Vier feste Startpakete ab 499 €, persönliche Beratung statt Baukasten.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Noventry Webdesign GbR">
+  <link rel="canonical" href="https://noventrywebdesign.com/webdesign.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Noventry Webdesign">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:title" content="Webdesign & Entwicklung – individuelle Websites aus Hemer | Noventry">
+  <meta property="og:description" content="Individuell entworfene und entwickelte Unternehmenswebsites für lokale Betriebe im Sauerland. Vier feste Startpakete ab 499 €, persönliche Beratung statt Baukasten.">
+  <meta property="og:image" content="https://noventrywebdesign.com/assets/logo-mark-light.png">
+  <meta property="og:url" content="https://noventrywebdesign.com/webdesign.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Webdesign & Entwicklung – individuelle Websites aus Hemer | Noventry">
+  <meta name="twitter:description" content="Individuell entworfene und entwickelte Unternehmenswebsites für lokale Betriebe im Sauerland. Vier feste Startpakete ab 499 €, persönliche Beratung statt Baukasten.">
+  <meta name="twitter:image" content="https://noventrywebdesign.com/assets/logo-mark-light.png">
+
+  <link rel="icon" href="favicon.ico?v=2" sizes="any">
+  <link rel="icon" href="favicon-32x32.png?v=2" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=2">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#000000">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Questrial&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&family=Allura&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": "https://noventrywebdesign.com/webdesign.html#service",
+        "name": "Webdesign und Webentwicklung",
+        "serviceType": "Individuelle Unternehmenswebsites",
+        "description": "Entwurf und Entwicklung individueller Unternehmenswebsites inklusive responsivem Design, SEO-Grundlagen sowie Pflege und Betreuung.",
+        "provider": {
+          "@id": "https://noventrywebdesign.com/#business"
+        },
+        "areaServed": [
+          "Hemer",
+          "Iserlohn",
+          "Menden",
+          "Hagen",
+          "Dortmund",
+          "Nordrhein-Westfalen"
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://noventrywebdesign.com/webdesign.html#webpage",
+        "url": "https://noventrywebdesign.com/webdesign.html",
+        "name": "Webdesign & Entwicklung – individuelle Websites aus Hemer | Noventry",
+        "isPartOf": {
+          "@id": "https://noventrywebdesign.com/#website"
+        },
+        "about": {
+          "@id": "https://noventrywebdesign.com/#business"
+        },
+        "inLanguage": "de-DE"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Startseite",
+            "item": "https://noventrywebdesign.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Webdesign",
+            "item": "https://noventrywebdesign.com/webdesign.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ═══════════ Unterseite: Webdesign ═══════════
+       Eigene Handschrift: die Arbeit steht vorn. Links die Aussage,
+       rechts drei echte Projekte als gestapelte Fenster, die auffaechern. */
+
+    .wd-hero{ position:relative; overflow:hidden; padding:146px 0 96px; border-bottom:1px solid var(--line-soft); }
+    .wd-hero::before{
+      content:''; position:absolute; right:-14%; top:-18%; width:780px; height:620px;
+      border-radius:50%; pointer-events:none;
+      background:radial-gradient(ellipse, rgba(46,91,255,.2), transparent 66%); filter:blur(12px);
+    }
+    .wd-hero .wrap{ position:relative; z-index:1; }
+    .wd-grid{ display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.04fr); gap:60px; align-items:center; }
+    .wd-kicker{
+      display:inline-flex; align-items:center; gap:10px; margin-bottom:22px;
+      font-family:var(--mono); font-size:.68rem; letter-spacing:.14em; text-transform:uppercase; color:var(--accent-2);
+    }
+    .wd-kicker::before{ content:''; width:28px; height:1px; background:var(--accent); }
+    .wd-h1{
+      font-family:'Questrial'; font-size:clamp(2.1rem,4.4vw,3.4rem);
+      line-height:1.07; letter-spacing:-.018em; color:#fff; margin:0 0 20px; max-width:17ch;
+    }
+    .wd-h1 em{ font-style:normal; color:var(--accent-2); }
+    .wd-lead{ color:var(--slate); font-size:1.04rem; line-height:1.7; max-width:46ch; }
+    .wd-acts{ display:flex; gap:12px; flex-wrap:wrap; margin-top:30px; }
+    .wd-facts{ display:flex; gap:30px; flex-wrap:wrap; margin-top:34px; padding-top:24px; border-top:1px solid var(--line-soft); }
+    .wd-fact b{ display:block; font-family:'Questrial'; font-size:1.45rem; color:#fff; line-height:1.1; }
+    .wd-fact span{ font-family:var(--mono); font-size:.64rem; letter-spacing:.1em; color:var(--muted); text-transform:uppercase; }
+
+    /* ── Drei echte Projekte als gestapelte Fenster ── */
+    .wd-stack{ position:relative; aspect-ratio:4 / 3.35; }
+    .wd-win{
+      position:absolute; left:0; right:0; border-radius:13px; overflow:hidden;
+      border:1px solid var(--line); background:#060A14;
+      box-shadow:0 34px 70px rgba(0,0,0,.62);
+      transition:transform .65s cubic-bezier(.16,1,.3,1), filter .65s ease, box-shadow .65s ease;
+    }
+    .wd-win-c{ top:0;    width:84%; left:8%;  transform:translateY(0); z-index:1; filter:brightness(.5) saturate(.7); }
+    .wd-win-b{ top:46px; width:92%; left:4%;  transform:translateY(0); z-index:2; filter:brightness(.74) saturate(.85); }
+    .wd-win-a{ top:96px; width:100%; left:0;  z-index:3; }
+    .wd-stack:hover .wd-win-c{ transform:translate(-9%,-30px) rotate(-3.2deg); filter:brightness(.72) saturate(.9); }
+    .wd-stack:hover .wd-win-b{ transform:translate(5%,-16px) rotate(2.2deg); filter:brightness(.92) saturate(1); }
+    .wd-stack:hover .wd-win-a{ transform:translateY(6px); box-shadow:0 44px 90px rgba(0,0,0,.7); }
+    .wd-winbar{ display:flex; align-items:center; gap:7px; padding:9px 12px; background:var(--panel-2); border-bottom:1px solid var(--line-soft); }
+    .wd-winbar i{ width:7px; height:7px; border-radius:50%; background:rgba(255,255,255,.16); display:block; flex:none; }
+    .wd-winbar i:first-child{ background:var(--accent); }
+    .wd-winbar span{
+      flex:1; min-width:0; text-align:center; font-family:var(--mono); font-size:.58rem; color:var(--muted);
+      background:rgba(255,255,255,.04); border:1px solid var(--line-soft); border-radius:6px; padding:3px 8px;
+      white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+    }
+    .wd-win img{ display:block; width:100%; height:auto; aspect-ratio:1400/780; object-fit:cover; object-position:center top; }
+    .wd-hint{
+      position:absolute; left:0; right:0; bottom:-34px; text-align:center;
+      font-family:var(--mono); font-size:.6rem; letter-spacing:.1em; color:var(--muted);
+      opacity:1; transition:opacity .4s ease;
+    }
+    .wd-stack:hover .wd-hint{ opacity:0; }
+
+    /* ── Einblicke ── */
+    .wd-sec{ border-top:1px solid var(--line-soft); }
+    .wd-head{ max-width:640px; }
+    .wd-head h2{ font-family:'Questrial'; font-size:clamp(1.9rem,3.8vw,2.9rem); line-height:1.1; color:#fff; margin:12px 0 14px; }
+    .wd-head p{ color:var(--slate); font-size:1rem; line-height:1.7; }
+
+    /* ── Pakete ── */
+    .wd-pakete{ border-top:1px solid var(--line-soft); }
+
+    /* ── Abschluss ── */
+    .wd-end{ border-top:1px solid var(--line-soft); }
+    .wd-end-in{ display:grid; grid-template-columns:minmax(0,1fr) auto; gap:36px; align-items:center; }
+    .wd-end h2{ font-family:'Questrial'; font-size:clamp(1.8rem,3.6vw,2.7rem); color:#fff; line-height:1.14; margin-bottom:14px; }
+    .wd-end p{ color:var(--slate); max-width:52ch; }
+    .wd-end-acts{ display:flex; gap:12px; flex-wrap:wrap; }
+
+    @media (max-width:1040px){
+      .wd-grid{ grid-template-columns:1fr; gap:64px; }
+      .wd-stack{ order:-1; max-width:560px; margin:0 auto; width:100%; }
+      .wd-end-in{ grid-template-columns:1fr; gap:24px; }
+    }
+    @media (max-width:640px){
+      .wd-hero{ padding:124px 0 76px; }
+      .wd-stack{ aspect-ratio:4 / 3.6; }
+      .wd-win-c{ top:0; } .wd-win-b{ top:32px; } .wd-win-a{ top:68px; }
+      .wd-hint{ bottom:-28px; }
+      .wd-acts .btn, .wd-end-acts .btn{ flex:1 1 auto; justify-content:center; }
+    }
+    @media (prefers-reduced-motion: reduce){
+      .wd-win{ transition:none; }
+      .wd-stack:hover .wd-win-c, .wd-stack:hover .wd-win-b, .wd-stack:hover .wd-win-a{ transform:none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" id="main-nav">
+    <div class="wrap nav-inner">
+      <a href="index.html" class="nav-brand" aria-label="Noventry Webdesign – Startseite">
+        <span>NOVENTRY GbR</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-home" aria-label="Home">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </a></li>
+        <li><a href="index.html#ueber">Über uns</a></li>
+        <li><a href="index.html#team">Team</a></li>
+        <li><a href="index.html#leistungen">Leistungen</a></li>
+        <li><a href="index.html#vorgehen">Unser Vorgehen</a></li>
+        <li><a href="webdesign.html">Webdesign</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="index.html#kontakt">Kontakt</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#ueber">Über uns</a></li>
+        <li><a href="index.html#team">Team</a></li>
+        <li><a href="index.html#leistungen">Leistungen</a></li>
+        <li><a href="index.html#vorgehen">Unser Vorgehen</a></li>
+        <li><a href="webdesign.html">Webdesign</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="index.html#kontakt">Kontakt</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <header class="wd-hero">
+      <div class="wrap wd-grid">
+        <div class="fu on">
+          <div class="wd-kicker">Leistung · Webdesign &amp; Entwicklung</div>
+          <h1 class="wd-h1">Die meisten Kunden sehen Ihre Website, <em>bevor sie Sie sehen.</em></h1>
+          <p class="wd-lead">Deshalb bauen wir sie so, wie Sie Ihre eigene Arbeit abliefern würden: sauber, durchdacht und ohne Abkürzungen. Keine Vorlage, kein Baukasten.</p>
+          <div class="wd-acts">
+            <a href="#pakete" class="btn btn-primary">Pakete ansehen</a>
+            <a href="index.html#kontakt" class="btn btn-ghost">Erstgespräch vereinbaren</a>
+          </div>
+          <div class="wd-facts">
+            <div class="wd-fact"><b>ab 499&nbsp;€</b><span>einmalig</span></div>
+            <div class="wd-fact"><b>2–6</b><span>Wochen Umsetzung</span></div>
+            <div class="wd-fact"><b>4</b><span>Startpakete</span></div>
+          </div>
+        </div>
+
+        <div class="wd-stack fu on">
+          <div class="wd-win wd-win-c">
+            <div class="wd-winbar" aria-hidden="true"><i></i><i></i><i></i><span>marezzo-london.com</span></div>
+            <img src="assets/proj-marezzo.jpg" alt="Website-Konzept Marezzo, ein Steakhouse in London" width="1400" height="875" loading="lazy" decoding="async">
+          </div>
+          <div class="wd-win wd-win-b">
+            <div class="wd-winbar" aria-hidden="true"><i></i><i></i><i></i><span>harry-style.de</span></div>
+            <img src="assets/proj-harrystyle.jpg" alt="Website des Friseursalons Harry Style" width="1400" height="875" loading="lazy" decoding="async">
+          </div>
+          <div class="wd-win wd-win-a">
+            <div class="wd-winbar" aria-hidden="true"><i></i><i></i><i></i><span>takumi-dortmund.com</span></div>
+            <img src="assets/proj-takumi.jpg" alt="Website des Ramen-Restaurants Takumi Dortmund" width="1400" height="875" loading="eager" decoding="async">
+          </div>
+          <span class="wd-hint" aria-hidden="true">Darüberfahren zum Auffächern</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="wd-sec" id="einblicke">
+      <div class="wrap">
+        <div class="wd-head fu">
+          <div class="wd-kicker">01 · Einblicke</div>
+          <h2>So sehen unsere Websites aus</h2>
+          <p>Ein reales Kundenprojekt, eine Referenzarbeit und ein Design-Showcase – jeweils komplett individuell entworfen und entwickelt.</p>
+        </div>
+      <div class="proj-list">
+        <a class="proj fu" href="https://takumi-dortmund.com/" target="_blank" rel="noopener noreferrer">
+          <div class="proj-index">01</div>
+          <div class="proj-media">
+            <img src="assets/proj-takumi.jpg" alt="Startseite der Website von Takumi Dortmund, einem japanischen Ramen-Restaurant" loading="lazy">
+            <span class="proj-badge proj-badge-client">Kundenprojekt</span>
+          </div>
+          <div>
+            <div class="proj-top">
+              <h3>Takumi Dortmund <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></h3>
+              <span class="proj-kind">Gastronomie · Ramen</span>
+            </div>
+            <p>Individuelles Webdesign &amp; Entwicklung für ein japanisches Ramen-Restaurant in Dortmund – unser erstes realisiertes Kundenprojekt.</p>
+            <div class="proj-tags"><span>Speisekarte</span><span>Fensterplätze</span><span>Anfahrt</span></div>
+            <span class="proj-cta">Website ansehen · takumi-dortmund.com <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+          </div>
+        </a>
+        <a class="proj fu" href="projekte/harry-style.html" target="_blank" rel="noopener noreferrer">
+          <div class="proj-index">02</div>
+          <div class="proj-media">
+            <img src="assets/proj-harrystyle.jpg" alt="Startseite der Website von Harry Style, einem Friseursalon in Berlin" loading="lazy">
+            <span class="proj-badge proj-badge-ref">Referenzprojekt</span>
+          </div>
+          <div>
+            <div class="proj-top">
+              <h3>Harry Style – Friseursalon <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></h3>
+              <span class="proj-kind">Beauty &amp; Lifestyle</span>
+            </div>
+            <p>Moderner Auftritt für einen Friseursalon in Berlin – Leistungsübersicht, Haartyp-Beratung und Bewertungen für direkte Terminbuchung.</p>
+            <div class="proj-tags"><span>Leistungen</span><span>Terminbuchung</span><span>Bewertungen</span></div>
+            <span class="proj-cta">Website ansehen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+          </div>
+        </a>
+        <a class="proj fu" href="https://marezzo.vercel.app/" target="_blank" rel="noopener noreferrer">
+          <div class="proj-index">03</div>
+          <div class="proj-media">
+            <img src="assets/proj-marezzo.jpg" alt="Startseite von Marezzo, einem Design-Concept für ein Steakhouse in Mayfair, London" loading="lazy">
+            <span class="proj-badge proj-badge-concept">Design Concept</span>
+          </div>
+          <div>
+            <div class="proj-top">
+              <h3>Marezzo <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></h3>
+              <span class="proj-kind">Premium Gastronomie · Steakhouse</span>
+            </div>
+            <p>Marezzo — Steakhouse am offenen Feuer, Mayfair, London. Eigenständige Konzeptarbeit ohne realen Auftraggeber – zeigt unsere Handschrift im Luxury-Webdesign.</p>
+            <div class="proj-tags"><span>Signature Cuts</span><span>Private Dining</span><span>Premium Design</span></div>
+            <span class="proj-cta">Website ansehen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+          </div>
+        </a>
+      </div>
+      </div>
+    </section>
+
+    <section class="wd-pakete" id="pakete">
+      <div class="wrap">
+        <div class="wd-head fu">
+          <div class="wd-kicker">02 · Pakete</div>
+          <h2>Wählen Sie Ihr Website-Paket</h2>
+          <p>Vier Bausteine, von der schlanken Onepage bis zum umfangreichen Auftritt. Klicken Sie eine Karte an, um sie nach vorne zu holen.</p>
+        </div>
+      <div class="deck-stage fu">
+        <button type="button" class="deck-arrow deck-arrow--prev" aria-label="Vorheriges Paket">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="deck" role="list">
+        <button type="button" class="deck-card" data-plan="starter" role="listitem" aria-pressed="false">
+          <span class="deck-index deck-index--tl">N<img class="deck-index-mark" src="assets/logo-mark-light.png" alt="" width="537" height="454" loading="lazy"></span>
+          <span class="deck-index deck-index--br">N<img class="deck-index-mark" src="assets/logo-mark-light.png" alt="" width="537" height="454" loading="lazy"></span>
+          <img class="deck-emblem" src="assets/logo-mark-light.png" alt="" aria-hidden="true" width="537" height="454" loading="lazy">
+          <div class="deck-body">
+            <div class="deck-name">Starter</div>
+            <div class="deck-price">499&nbsp;€</div>
+            <p class="deck-desc">Ideal für Selbstständige und kleine Unternehmen.</p>
+            <ul class="deck-features">
+              <li>Individuell gestalteter Onepager</li>
+              <li>Modernes Design für Smartphone, Tablet &amp; Desktop</li>
+              <li>Kontaktformular &amp; Google Maps Integration</li>
+              <li>Schnelle Ladezeiten &amp; SEO-Grundoptimierung</li>
+              <li>Persönliches Beratungsgespräch &amp; 1 Feedbackrunde</li>
+            </ul>
+            <span class="deck-cta">Projekt anfragen</span>
+          </div>
+        </button>
+
+        <button type="button" class="deck-card" data-plan="advanced" role="listitem" aria-pressed="false">
+          <span class="deck-index deck-index--tl">N<img class="deck-index-mark" src="assets/logo-mark-light.png" alt="" width="537" height="454" loading="lazy"></span>
+          <span class="deck-index deck-index--br">N<img class="deck-index-mark" src="assets/logo-mark-light.png" alt="" width="537" height="454" loading="lazy"></span>
+          <img class="deck-emblem" src="assets/logo-mark-light.png" alt="" aria-hidden="true" width="537" height="454" loading="lazy">
+          <div class="deck-body">
+            <div class="deck-name">Advanced</div>
+            <div class="deck-price">799&nbsp;€</div>
+            <p class="deck-desc">Ideal für Unternehmen mit mehreren Leistungen oder Angeboten.</p>
+            <ul class="deck-features">
+              <li>Bis zu 5 individuell gestaltete Unterseiten</li>
+              <li>Professioneller Foto-Service vor Ort &amp; Bildoptimierung</li>
+              <li>Erweiterte SEO- &amp; Performance-Optimierung</li>
+              <li>Individuelles Webdesign mit durchdachter Seitenstruktur</li>
+              <li>2 Feedbackrunden &amp; persönliche Projektbegleitung</li>
+            </ul>
+            <span class="deck-cta">Projekt anfragen</span>
+          </div>
+        </button>
+
+        <button type="button" class="deck-card" data-plan="premium" role="listitem" aria-pressed="false">
+          <span class="deck-index deck-index--tl">N<img class="deck-index-mark" src="assets/logo-mark-light.png" alt="" width="537" height="454" loading="lazy"></span>
+          <span class="deck-index deck-index--br">N<img class="deck-index-mark" src="assets/logo-mark-light.png" alt="" width="537" height="454" loading="lazy"></span>
+          <img class="deck-emblem" src="assets/logo-mark-light.png" alt="" aria-hidden="true" width="537" height="454" loading="lazy">
+          <div class="deck-body">
+            <div class="deck-name">Premium</div>
+            <div class="deck-price">1.199&nbsp;€</div>
+            <p class="deck-desc">Ideal für Unternehmen mit höchsten Ansprüchen an Design und Funktionalität.</p>
+            <ul class="deck-features">
+              <li>Bis zu 10–15 individuell gestaltete Seiten</li>
+              <li>Individuelles Premium-Webdesign mit hochwertigen Animationen</li>
+              <li>Lizenzierte Premium-Bilder (iStock) inklusive</li>
+              <li>Erweiterte SEO &amp; individuelle Funktionen nach Wunsch</li>
+              <li>Priorisierte Betreuung &amp; mehrere Feedbackrunden</li>
+            </ul>
+            <span class="deck-cta">Projekt anfragen</span>
+          </div>
+        </button>
+
+        <button type="button" class="deck-card" data-plan="support" role="listitem" aria-pressed="false">
+          <span class="deck-index deck-index--tl">N<img class="deck-index-mark" src="assets/logo-mark-light.png" alt="" width="537" height="454" loading="lazy"></span>
+          <span class="deck-index deck-index--br">N<img class="deck-index-mark" src="assets/logo-mark-light.png" alt="" width="537" height="454" loading="lazy"></span>
+          <img class="deck-emblem" src="assets/logo-mark-light.png" alt="" aria-hidden="true" width="537" height="454" loading="lazy">
+          <div class="deck-body">
+            <div class="deck-name">Wartung &amp; Support</div>
+            <div class="deck-price">19,99&nbsp;€/Monat</div>
+            <ul class="deck-features">
+              <li>Hosting inklusive</li>
+              <li>SSL-Zertifikat &amp; Sicherheitsupdates</li>
+              <li>Regelmäßige Backups</li>
+              <li>Überwachung der Erreichbarkeit</li>
+              <li>Performance-Checks &amp; technische Wartung</li>
+            </ul>
+            <span class="deck-cta">Projekt anfragen</span>
+          </div>
+        </button>
+        </div>
+        <button type="button" class="deck-arrow deck-arrow--next" aria-label="Nächstes Paket">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+
+      <p class="deck-note">Alle Preise sind Richtwerte – der genaue Preis wird im kostenlosen Erstgespräch individuell ermittelt.</p>
+      </div>
+    </section>
+
+    <section class="wd-end">
+      <div class="wrap wd-end-in fu">
+        <div>
+          <h2>Lassen Sie uns über Ihr Projekt sprechen.</h2>
+          <p>Im kostenlosen Erstgespräch klären wir, was Ihre Seite leisten soll – und welches Paket dafür überhaupt nötig ist.</p>
+        </div>
+        <div class="wd-end-acts">
+          <a href="index.html#kontakt" class="btn btn-primary">Kostenloses Erstgespräch</a>
+          <a href="ki-chatbots.html" class="btn btn-ghost">KI-Chatbot ansehen</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-bg-word" aria-hidden="true">NOVENTRY</div>
+      <div class="footer-card fu">
+        <div class="footer-card-grid">
+          <div class="footer-brand-col">
+            <div class="footer-brand-row">
+              <img src="assets/logo-mark-light.png" alt="Noventry Webdesign Logo" width="537" height="454" loading="lazy">
+              <span>Noventry</span>
+            </div>
+            <p class="footer-tagline">Websites, KI-Chatbots und Social Media für Handwerksbetriebe und lokale Unternehmen. Wir entwickeln den Auftritt – und betreuen ihn auf Wunsch dauerhaft weiter.</p>
+            <div class="footer-social">
+              <a href="https://www.instagram.com/noventry_webdesign/" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/tim-bimberg-a7b509308/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+              <a href="mailto:noventry.webdesign@gmail.com" aria-label="E-Mail">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-links-col">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="index.html#top">Startseite</a></li>
+              <li><a href="index.html#ueber">Über uns</a></li>
+              <li><a href="index.html#leistungen">Leistungen</a></li>
+              <li><a href="webdesign.html#einblicke">Referenzen</a></li>
+              <li><a href="index.html#kontakt">Kontakt</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-col">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="webdesign.html">Website-Erstellung</a></li>
+              <li><a href="index.html#leistungen">SEO &amp; Sichtbarkeit</a></li>
+              <li><a href="index.html#leistungen">Pflege &amp; Betreuung</a></li>
+              <li><a href="ki-chatbots.html">KI-Chatbots</a></li>
+              <li><a href="social-media.html">Social Media Marketing</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-col">
+            <h4>Unternehmen</h4>
+            <ul>
+              <li><a href="index.html#ueber">Über Noventry</a></li>
+              <li><a href="index.html#team">Team</a></li>
+              <li><a href="index.html#kontakt">Kontakt</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-col">
+            <h4>Rechtliches</h4>
+            <ul>
+              <li><a href="impressum.html">Impressum</a></li>
+              <li><a href="datenschutz.html">Datenschutz</a></li>
+              <li><button type="button" class="footer-link-btn" id="footer-cookie-settings">Cookie-Einstellungen</button></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+          <span>© 2026 Noventry. Alle Rechte vorbehalten.</span>
+          <div class="footer-bottom-links">
+            <a href="impressum.html">Impressum</a>
+            <a href="datenschutz.html">Datenschutz</a>
+            <button type="button" class="footer-link-btn" id="footer-cookie-settings-2">Cookies</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+
+    /* ── Scroll-Einblendungen ── */
+    (function () {
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (!e.isIntersecting && e.boundingClientRect.top >= 0) return;
+          e.target.classList.add('on');
+          obs.unobserve(e.target);
+        });
+      }, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.fu').forEach(el => obs.observe(el));
+    })();
+
+    /* ── Mobil-Menü ── */
+    (function () {
+      const nav = document.getElementById('main-nav');
+      const toggle = document.getElementById('nav-toggle');
+      const menu = document.getElementById('mobile-menu');
+      if (!nav || !toggle || !menu) return;
+      const close = () => { nav.classList.remove('is-open'); toggle.setAttribute('aria-expanded', 'false'); };
+      toggle.addEventListener('click', () => {
+        const open = nav.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', String(open));
+      });
+      menu.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+    })();
+
+    /* ── 3D-Neigung nach Mausposition (nur Zeigegeraete, nicht bei Reduced Motion) ── */
+    (function () {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      if (!window.matchMedia('(hover:hover) and (pointer:fine)').matches) return;
+      document.querySelectorAll('[data-tilt]').forEach(stage => {
+        const max = parseFloat(stage.dataset.tilt) || 10;
+        const target = stage.querySelector('[data-tilt-target]') || stage.firstElementChild;
+        if (!target) return;
+        let raf = null, tx = 0, ty = 0;
+        stage.addEventListener('pointermove', ev => {
+          const r = stage.getBoundingClientRect();
+          tx = ((ev.clientX - r.left) / r.width - 0.5) * 2;
+          ty = ((ev.clientY - r.top) / r.height - 0.5) * 2;
+          if (!raf) raf = requestAnimationFrame(() => {
+            target.style.setProperty('--ry', (tx * max).toFixed(2) + 'deg');
+            target.style.setProperty('--rx', (-ty * max).toFixed(2) + 'deg');
+            raf = null;
+          });
+        });
+        stage.addEventListener('pointerleave', () => {
+          target.style.setProperty('--ry', '0deg');
+          target.style.setProperty('--rx', '0deg');
+        });
+      });
+    })();
+
+
+    /* ── Paket-Deck ── */
+    (function () {
+      const cards = Array.from(document.querySelectorAll('.deck-card'));
+      const prevBtn = document.querySelector('.deck-arrow--prev');
+      const nextBtn = document.querySelector('.deck-arrow--next');
+      if (!cards.length) return;
+      let selected = 0; // Starter startet vorne
+
+      function layout() {
+        const n = cards.length;
+        cards.forEach((card, i) => {
+          card.classList.remove('is-front', 'is-left', 'is-right', 'is-back');
+          card.setAttribute('aria-pressed', 'false');
+          const diff = (i - selected + n) % n;
+          if (diff === 0) { card.classList.add('is-front'); card.setAttribute('aria-pressed', 'true'); }
+          else if (diff === n - 1) { card.classList.add('is-left'); }
+          else if (diff === 1) { card.classList.add('is-right'); }
+          else { card.classList.add('is-back'); }
+        });
+      }
+      cards.forEach((card, i) => card.addEventListener('click', () => { selected = i; layout(); }));
+      if (prevBtn) prevBtn.addEventListener('click', () => { selected = (selected - 1 + cards.length) % cards.length; layout(); });
+      if (nextBtn) nextBtn.addEventListener('click', () => { selected = (selected + 1) % cards.length; layout(); });
+      layout();
+    })();
+  
+  </script>
+</body>
+</html>
