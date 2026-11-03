@@ -305,8 +305,9 @@
     .hero .brandsub{
       font-family:'Questrial'; color:#8FA3BE;
       font-size:clamp(1rem, 2.4vw, 1.5rem);
-      letter-spacing:.5em; text-transform:uppercase;
-      margin-top:10px; margin-left:.5em;
+      /* "GbR" wird nicht in Versalien gesperrt – sonst stuende dort "G B R" */
+      letter-spacing:.18em; text-transform:none;
+      margin-top:12px; margin-left:.18em;
     }
     .hero .tagline{
       color:#C4CEDC; font-size:clamp(1rem, 2vw, 1.25rem);
@@ -1019,6 +1020,15 @@
 
     .route-addr-form{ display:flex; flex-direction:column; gap:8px; }
     .route-addr-row{ display:flex; gap:8px; }
+    /* Kurzer Hinweis, wenn der Standort fehlt und die Adresse gebraucht wird */
+    .route-addr-form.is-gefragt .route-addr-row input{
+      border-color:var(--accent); box-shadow:0 0 0 3px rgba(46,91,255,.22);
+    }
+    .route-addr-form.is-gefragt label{ color:var(--accent-2); }
+    @media (prefers-reduced-motion: no-preference){
+      .route-addr-form.is-gefragt .route-addr-row input{ animation:addrPuls 1.3s ease-in-out 2; }
+      @keyframes addrPuls{ 0%,100%{ box-shadow:0 0 0 3px rgba(46,91,255,.22); } 50%{ box-shadow:0 0 0 7px rgba(46,91,255,.05); } }
+    }
     .route-addr-row input{
       flex:1; min-width:0; padding:12px 16px; border-radius:99px;
       background:rgba(255,255,255,.04); border:1px solid var(--line);
