@@ -35,7 +35,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://unpkg.com" crossorigin>
-  <link rel="preconnect" href="https://basemaps.cartocdn.com" crossorigin>
+  <link rel="preconnect" href="https://tile.openstreetmap.org" crossorigin>
   <link rel="dns-prefetch" href="https://router.project-osrm.org">
   <link rel="dns-prefetch" href="https://nominatim.openstreetmap.org">
   <link href="https://fonts.googleapis.com/css2?family=Questrial&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&family=Allura&display=swap" rel="stylesheet">
@@ -949,9 +949,12 @@
         if (map) return map;
         map = L.map(mapEl, { zoomControl: false, attributionControl: true, scrollWheelZoom: false });
         L.control.zoom({ position: 'bottomright' }).addTo(map);
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-          maxZoom: 20,
-          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions" target="_blank" rel="noopener">CARTO</a>'
+        // OpenStreetMap-Kacheln brauchen keinen Schluessel. Die dunkle Anmutung
+        // entsteht per CSS-Filter auf der Kachelebene (#route-map .leaflet-tile-pane),
+        // damit Route und Marker in Markenblau unveraendert bleiben.
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 19,
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>'
         }).addTo(map);
         L.marker([HEMER.lat, HEMER.lng], { icon: destIcon })
           .addTo(map)
